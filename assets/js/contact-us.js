@@ -2,7 +2,6 @@
 const mapIframe = document.querySelector('iframe[title="Our location"]');
 
 if (mapIframe) {
-  mapIframe.addEventListener('touchstart', touchStartHandler, { passive: true });
   mapIframe.addEventListener('touchmove', touchMoveHandler, { passive: true });
   mapIframe.addEventListener('wheel', wheelHandler, { passive: true });
 }
