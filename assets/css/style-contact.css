@@ -198,26 +198,14 @@ textarea {
 .fa-phone:before {
     content: "\f095"
 }
-<!--
-.mapouter {
-    position: relative;
-    width: 100%;
-}
 
-.gmap_canvas {
-    overflow: hidden;
-    width: 100%;
-
-}
-
-.gmap_canvas iframe {
-    position: relative;
+iframe{
+    border: none;
     width: 100%;
     aspect-ratio: 3/1;
     height: auto;
-    z-index: 2
-} 
--->
+}
+
 @media screen and (max-width: 1350px) {
     .column1{
         width: 60%;
