@@ -1,4 +1,4 @@
-const ourIframe = document.getElementById('iframe-container');
+const ourIframeConatiner = document.getElementById('iframe-container');
             setTimeout(() => {
             const ourIframe = 
             `<iframe 
@@ -10,7 +10,7 @@ const ourIframe = document.getElementById('iframe-container');
                 allowfullscreen = true 
                 referrerpolicy = 'no-referrer-when-downgrade' >
             </iframe>`
-            ourIframe.innerHTML = ourIframe;
+            ourIframeContainer.innerHTML = ourIframe;
             }, 7000);
 
 
