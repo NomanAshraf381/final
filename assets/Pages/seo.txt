@@ -1,0 +1,130 @@
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-4">
+                            <div class="carrd">
+                                <div class="cardbody">
+                                    <div class="card-img">
+                                        <img src="assets/img/loader.gif" width="300px" height="200px"
+                                            orig-img="assets/img/random19.webp" 
+                                            orig-img2="assets/img/screenb/random19.webp" 
+                                            alt="What is Argumented Reality?">
+                                        <div class="effect">
+                                            <span>
+                                                <i class="fa-solid fa-link"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title py-2 px-3">
+                                        <a href="#">Augmented Reality: Enhanced Virtual Experiences to see world throught mobile</a>
+                                    </div>
+                                </div>
+                                <div class="card-foot p-2">
+                                    <div class="card-date">
+                                        <span class="upload">Uploaded&nbspOn</span>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>23 Jan 2023</span>
+                                    </div>
+                                    <div class="card-view">
+                                        <span class="viewz"></span>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>234</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-4">
+                            <div class="carrd">
+                                <div class="cardbody">
+                                    <div class="card-img">
+                                        <img src="assets/img/loader.gif" width="300px" height="200px"
+                                            orig-img="assets/img/laravel.webp"
+                                            orig-img2="assets/img/screenb/laravel.webp"
+                                            alt="Advantages and Disadvantages of Laravel Website Development">
+                                        <div class="effect">
+                                            <span>
+                                                <i class="fa-solid fa-link"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title py-2 px-3">
+                                        <a href="#">What are the Advantages and Disadvantages of Laravel for Website
+                                            Development?</a>
+                                    </div>
+                                </div>
+                                <div class="card-foot p-2">
+                                    <div class="card-date">
+                                        <span class="upload">Uploaded&nbspOn</span>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>21 May 2023</span>
+                                    </div>
+                                    <div class="card-view">
+                                        <span class="viewz"></span>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>221</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-4">
+                            <div class="carrd">
+                                <div class="cardbody">
+                                    <div class="card-img">
+                                        <img src="assets/img/loader.gif" width="300px" height="200px"
+                                            orig-img="assets/img/ecommerce2.webp" 
+                                            orig-img2="assets/img/screenb/ecommerce2.webp" 
+                                            alt="What is ecomerce">
+                                        <div class="effect">
+                                            <span>
+                                                <i class="fa-solid fa-link"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title py-2 px-3">
+                                        <a href="#">What is E-commerce? A Comprehensive Guide to the benefits of ecommerce</a>
+                                    </div>
+                                </div>
+                                <div class="card-foot p-2">
+                                    <div class="card-date">
+                                        <span class="upload">Uploaded&nbspOn</span>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>15 Jan 2023</span>
+                                    </div>
+                                    <div class="card-view">
+                                        <span class="viewz"></span>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>134</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 mt-4">
+                            <div class="carrd">
+                                <div class="cardbody">
+                                    <div class="card-img">
+                                        <img src="assets/img/loader.gif" width="300px" height="200px"
+                                            orig-img="assets/img/webdevelopment.webp"
+                                            orig-img2="assets/img/screenb/webdevelopment.webp"
+                                            alt="Advantages and Disadvantages of Laravel Website Development">
+                                        <div class="effect">
+                                            <span>
+                                                <i class="fa-solid fa-link"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="card-title py-2 px-3">
+                                        <a href="#">What are the Advantages and Disadvantages of Javascript for Website
+                                            Development?</a>
+                                    </div>
+                                </div>
+                                <div class="card-foot p-2">
+                                    <div class="card-date">
+                                        <span class="upload">Uploaded&nbspOn</span>
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>21 May 2023</span>
+                                    </div>
+                                    <div class="card-view">
+                                        <span class="viewz"></span>
+                                        <i class="fa-regular fa-eye"></i>
+                                        <span>221</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
