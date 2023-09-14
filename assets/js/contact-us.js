@@ -1,9 +1,12 @@
-// Get a reference to the iframe element by its title attribute
 const mapIframe = document.querySelector('iframe[title="Our location"]');
 
+// Check if the iframe element exists
 if (mapIframe) {
+  // Add passive event listeners for touch and wheel events to the iframe
+  mapIframe.addEventListener('touchstart', touchStartHandler, { passive: true });
   mapIframe.addEventListener('touchmove', touchMoveHandler, { passive: true });
   mapIframe.addEventListener('wheel', wheelHandler, { passive: true });
+  mapIframe.contentWindow.addEventListener('scroll', scrollHandler, { passive: true });
 }
 
 
