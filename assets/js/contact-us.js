@@ -3,10 +3,10 @@ const mapIframe = document.querySelector('iframe[title="Our location"]');
 // Check if the iframe element exists
 if (mapIframe) {
   // Add passive event listeners for touch and wheel events to the iframe
-  mapIframe.addEventListener('touchstart', touchStartHandler, { passive: true });
-  mapIframe.addEventListener('touchmove', touchMoveHandler, { passive: true });
-  mapIframe.addEventListener('wheel', wheelHandler, { passive: true });
-  mapIframe.contentWindow.addEventListener('scroll', scrollHandler, { passive: true });
+  mapIframe.addEventListener('touchstart', touchStartHandler, { passive: false });
+  mapIframe.addEventListener('touchmove', touchMoveHandler, { passive: false });
+  mapIframe.addEventListener('wheel', wheelHandler, { passive: false });
+
 }
 
 
