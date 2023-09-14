@@ -1,0 +1,762 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+    --dominent: rgb(51, 102, 153);
+    --link: #cd1b1b;
+    --black: #000000;
+    --blurblack: #1f1d1d;
+    --webind: #f4f4f4;
+    --infoshadow: rgb(82 85 90/10%);
+    --button: #282936;
+    --darkheadingspara: rgb(66, 67, 66);
+    --white: #fff;
+    --whitefaded: #ffffff25;
+    --bdr: #ccc;
+    --cardbdr: rgb(229, 229, 229);
+    --wester: #DCD5CF;
+    --transparent: transparent;
+    --controls: rgba(255, 255, 255, 0.38);
+    --gradcomb: #cce9fd;
+    --scroll: #ebebeb;
+    --hovershadow: rgb(49, 156, 169);
+    --cardshadow: rgb(0, 0, 0, .1);
+    --subscribe: #188754;
+    --inpborder: #A2C8FE;
+    --facebook: rgb(64, 100, 174);
+    --youtube: rgb(227, 33, 23);
+    --linkedin: rgb(14, 117, 167);
+    --instagram: rgb(202, 53, 131);
+    --insgrad: rgb(239, 143, 52);
+    --likee: rgb(255, 35, 115);
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    height: 16px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--blurblack);
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--scroll);
+    border-radius: 15px;
+}
+
+body{
+    /* font-family: var(--bs-font-sans-serif); */
+}
+
+.section-wrapper {
+    max-width: 2500px;
+    margin: 0 auto;
+}
+
+.gototop {
+    position: fixed;
+    bottom: 30px;
+    right: -50px;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    z-index: 200;
+    border-radius: 50%;
+    background-color: var(--white);
+    border: 1px solid var(--dominent);
+    box-shadow: 0 0 20px 2px var(--cardshadow);
+    transition: 1s;
+    text-decoration: none;
+    transform: rotate(360deg);
+    color: var(--dominent);
+}
+
+.gototop.goactive {
+    right: 3%;
+    transform: rotate(0deg);
+    transition: 1s;
+}
+
+.gototop:hover {
+    color: var(--white);
+    background-color: var(--dominent);
+    transition: .2s;
+}
+
+header {
+    background-color: var(--dominent);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    padding: 7px 2%;
+    max-width: 2800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: .5s;
+}
+
+nav.stick {
+    padding: 5px 3%;
+    transition: .5s;
+}
+
+.logo a {
+    width: 100px;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+}
+
+.right-nav>ul {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.right-nav>ul li {
+    margin: 0 1px;
+    list-style-type: none;
+    padding: 7px 13px;
+    color: var(--white);
+    border-radius: 4px;
+    position: relative;
+}
+
+.right-nav ul li a {
+    text-decoration: none;
+    color: inherit;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.active {
+    color: var(--black) !important;
+    background-color: var(--white);
+}
+
+.right-nav>ul li:hover {
+    color: var(--blurblack) !important;
+    background-color: var(--white);
+}
+
+.fa-caret-down {
+    font-size: 12px !important;
+}
+
+#tbars,
+#search {
+    padding: 7px 11px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    margin-left: 10px;
+    border-radius: 3px;
+    background-color: var(--transparent);
+}
+
+#tbars:hover,
+#search:hover {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+#tbars {
+    display: none;
+}
+
+#submenu {
+    position: absolute;
+    display: none;
+    z-index: 5;
+    top: 38px;
+    left: 0;
+    width: 200px;
+    border-bottom: 5px solid var(--dominent);
+    border-radius: 0 0 5px 5px;
+    padding: 0;
+}
+
+.right-nav ul li:hover #submenu {
+    display: block;
+}
+
+#submenu li {
+    border-radius: 0;
+    color: var(--black);
+    background-color: var(--white);
+    padding: 10px 13px;
+    margin: 0;
+}
+
+#submenu li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#submenu li:first-of-type {
+    border-bottom: 1px solid var(--bdr);
+}
+
+#submenu li:hover,
+#submenu li.active {
+    background-color: var(--dominent);
+    color: var(--white) !important;
+}
+
+.search-modal {
+    display: none;
+    position: absolute;
+    right: 5%;
+    z-index: 10;
+    top: 70px;
+    padding: 15px;
+    width: 30%;
+    min-width: 280px;
+    background-color: var(--wester);
+    box-shadow: 0 0 3px var(--dominent);
+}
+
+.search-modal.sactive {
+    display: block;
+}
+
+.search-modal input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 10px 40px var(--dominent), 0 0 0 16px var(--white);
+}
+
+.website-info {
+    background-color: var(--webind);
+    padding: 10px 5%;
+    max-width: 2500px;
+    margin: 0 auto;
+    border-bottom: 5px solid var(--bdr);
+}
+
+.website-info ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 10px;
+}
+
+.website-info ul li {
+    display: inline-block;
+    color: var(--link);
+    font-size: 17px;
+    padding: 0 7px;
+}
+
+.website-info li a {
+    text-decoration: none;
+    color: var(--link);
+}
+
+.wactive a,
+.website-info li:hover a {
+    color: var(--dominent) !important;
+}
+
+.website-info li+li:before {
+    padding: 8px;
+    color: var(--dominent);
+    content: "/\00a0";
+}
+
+.smedia{
+    margin: 0 auto;
+    max-width: 2500px;
+}
+
+section{
+    padding: 100px 5% 50px;
+}
+
+section p{
+    font-size: 14px;
+}
+
+.ribbon {
+    width: 40%;
+    min-width: 350px;
+    margin: 0 auto;
+    background-color: var(--dominent);
+    color: var(--white);
+    padding: 10px;
+    position: relative;
+}
+
+.ribbon h3 {
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.ribbon::before,
+.ribbon::after {
+    content: '';
+    display: block;
+    border: 20px solid;
+    position: absolute;
+    bottom: -20%;
+}
+
+.ribbon::before {
+    border-color: var(--dominent) var(--dominent) var(--dominent) var(--transparent);
+    left: -32px;
+
+}
+
+.ribbon::after {
+    border-color: var(--dominent) var(--transparent) var(--dominent) var(--dominent);
+    right: -32px;
+}
+
+.smedia a {
+    text-decoration: none;
+}
+
+.smedia-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+}
+
+.smedia-account * {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.smedia-account img {
+    width: 50px;
+    height: 50px;
+}
+
+.smedia-account span {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--dominent);
+}
+
+.smedia-account p {
+    color: var(--blurblack);
+}
+
+.message {
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    color: var(--white);
+}
+
+.message span {
+    display: inherit;
+    animation: keepmoving 2s infinite ease-in-out;
+}
+
+@keyframes keepmoving {
+
+    0%,
+    100% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        transform: translate(-30px);
+    }
+
+}
+
+.smedia-account::before,
+.smedia-account::after {
+    position: absolute;
+    top: 0;
+    content: '';
+    border: 25px solid;
+}
+
+.smedia-account::before {
+    left: 0;
+
+}
+
+.smedia-account::after {
+    right: 0;
+    display: none;
+}
+
+
+.yt {
+    border: 2px solid var(--youtube);
+}
+
+.yt .message {
+    background-color: var(--youtube);
+
+}
+
+.yt .smedia-account::before {
+    border-color: var(--youtube) transparent transparent var(--youtube);
+}
+
+.yt .smedia-account::after {
+    border-color: var(--youtube) var(--youtube) transparent transparent;
+}
+
+.fb {
+    border: 2px solid var(--facebook);
+}
+
+.fb .message {
+    background-color: var(--facebook);
+
+}
+
+.fb .smedia-account::before {
+    border-color: var(--facebook) transparent transparent var(--facebook);
+}
+
+.fb .smedia-account::after {
+    border-color: var(--facebook) var(--facebook) transparent transparent;
+}
+
+.ig {
+    border: 2px solid var(--instagram);
+}
+
+.ig .message {
+    background: linear-gradient(to right, var(--insgrad), var(--instagram));
+
+}
+
+.ig .smedia-account::before {
+    border-color: var(--instagram) transparent transparent var(--instagram);
+}
+
+.ig .smedia-account::after {
+    border-color: var(--instagram) var(--instagram) transparent transparent;
+}
+
+.twt {
+    border: 2px solid var(--black);
+}
+
+.twt .message {
+    background-color: var(--black);
+
+}
+
+.twt .smedia-account::before {
+    border-color: var(--black) transparent transparent var(--black);
+}
+
+.twt .smedia-account::after {
+    border-color: var(--black) var(--black) transparent transparent;
+}
+
+.smedia:hover .message span {
+    animation-play-state: paused;
+}
+
+.smedia:hover .smedia-account::after {
+    display: block;
+}
+
+.subscribe {
+    padding: 40px 5%;
+    background-color: var(--dominent);
+    color: var(--white);
+}
+
+.subscribe .section-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.subscribe h2 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact label {
+    display: none;
+}
+
+.contact input {
+    border-color: var(--transparent);
+    padding: 0 15px;
+    min-width: 290px;
+    border-radius: 30px 0 0 30px;
+    border-style: solid;
+    outline: none;
+}
+
+.contact input:focus {
+    border-color: var(--inpborder);
+}
+
+.contact button {
+    border-color: var(--transparent);
+    padding: 15px 20px;
+    border-radius: 0 30px 30px 0;
+    background-color: var(--subscribe);
+    color: var(--white);
+    font-weight: 600;
+}
+
+.icons {
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.icon {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 10px var(--cardshadow);
+    position: relative;
+}
+
+.facebook {
+    color: var(--facebook);
+    margin-right: -10px;
+}
+
+.twitter {
+    color: var(--black);
+    margin-right: -10px;
+}
+
+.youtube {
+    margin-right: -10px;
+    color: var(--youtube);
+}
+
+.linkedin {
+    color: var(--linkedin);
+}
+
+.instagram {
+    margin-left: -10px;
+    color: var(--instagram);
+}
+
+.tiktok {
+    color: var(--black);
+    margin-left: -10px;
+}
+
+.likee {
+    margin-left: -10px;
+    color: var(--likee);
+}
+
+.icons:hover .icon {
+    transition: .5s;
+    margin: 0 3px;
+}
+
+.facebook:hover {
+    color: var(--white);
+    background-color: var(--facebook);
+}
+
+.twitter:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.youtube:hover {
+    color: var(--white);
+    background-color: var(--youtube);
+}
+
+.linkedin:hover {
+    color: var(--white);
+    background-color: var(--linkedin);
+}
+
+.instagram:hover {
+    color: var(--white);
+    background-color: var(--instagram);
+}
+
+.tiktok:hover {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+.likee:hover {
+    color: var(--white);
+    background-color: var(--likee);
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-links a {
+    text-decoration: underline;
+    color: var(--blurblack);
+    margin: 5px;
+}
+
+.contact-links a:hover {
+    color: var(--dominent);
+}
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 5%;
+}
+
+.copyright p {
+    margin: 0 10px;
+}
+
+.copyright p a {
+    text-decoration: underline;
+    color: var(--blurblack);
+    font-weight: 600;
+}
+
+.copyright p a:hover {
+    color: var(--dominent);
+}
+
+
+
+
+@media screen and (max-width: 990px) {
+
+    .right-nav ul {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 10;
+        padding: 0;
+        width: 100%;
+        background-color: var(--white);
+    }
+
+    .right-nav ul li a {
+        color: var(--black);
+        padding-left: 20px;
+    }
+
+    #submenu li:hover a,
+    #submenu li.active a {
+        background-color: var(--dominent);
+        color: var(--white) !important;
+    }
+
+    .right-nav>ul li {
+        border-bottom: 1px solid var(--bdr);
+    }
+
+    #submenu {
+        position: static;
+        border-bottom: none;
+    }
+
+    #tbars {
+        display: inline-block;
+    }
+
+    .nactive {
+        display: inline !important;
+    }
+
+    .logo img {
+        width: 170px;
+        height: auto;
+    }
+
+    .subscribe h2 {
+        font-size: 23px;
+    }
+
+    .contact button {
+        padding: 12px 17px;
+        border-radius: 0 25px 25px 0;
+    }
+
+    .contact input {
+        min-width: 250px;
+        border-radius: 25px 0 0 25px;
+    }
+
+    .ribbon h3 {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #carouselExampleIndicators {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .lcard-content p {
+        display: none !important;
+    }
+
+    .logo img {
+        width: 150px;
+        height: auto;
+    }
+
+    .contact button {
+        padding: 10px 12px;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .contact input {
+        width: 90%;
+        min-width: 180px;
+        border-radius: 20px 0 0 20px;
+    }
+
+    .ribbon {
+        min-width: 250px;
+    }
+}

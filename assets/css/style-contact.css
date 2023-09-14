@@ -1,0 +1,249 @@
+:root {
+    --dominent: rgb(51, 102, 153);
+    --gradmix: rgb(123, 171, 219);
+    --cardbdr: rgb(229, 229, 229);
+    --infoshadow: rgb(82 85 90/10%);
+    --blurblack: #1f1d1d;
+}
+
+nav li a{
+    font-weight: 500;
+}
+
+#search, #tbars{
+    padding: 9px 12px; 
+}
+.section-wrapper {
+    display: flex;
+}
+
+.contact-form,
+.information {
+    padding: 35px;
+    border-radius: 7px;
+    box-shadow: 0 0 30px var(--infoshadow);
+}
+
+.contact-form h1,
+.information h2 {
+    color: var(--dominent);
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-form p {
+    font-size: 13px;
+}
+
+.ribbon {
+    margin-bottom: 50px;
+}
+
+.name,
+.subj,
+.email {
+    position: relative;
+}
+
+.name i,
+.subj i,
+.email i {
+    position: absolute;
+    left: 15px;
+    bottom: 17px;
+    font-size: 19px;
+    color: var(--dominent);
+}
+
+.contact-form form {
+    margin-top: 20px;
+    border-top: 1px solid var(--cardbdr);
+}
+
+.name-email {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sendmessage {
+    padding-top: 50px;
+}
+
+.sendmessage label {
+    display: block;
+    margin: 20px 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sendmessage input {
+    border: none;
+    border-left: 5px solid var(--dominent);
+    box-shadow: 0 0 20px 5px var(--infoshadow);
+    padding: 15px 12px 15px 40px;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+}
+
+.sendmessage input,
+.sendmessage textarea {
+    width: 100%;
+}
+
+.mess {
+    position: relative;
+}
+
+.mess i {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    font-size: 19px;
+    color: var(--dominent);
+}
+
+textarea {
+    border-color: var(--cardbdr);
+    font-size: 18px;
+    padding: 10px 10px 10px 50px;
+}
+
+.button-div {
+    text-align: right;
+}
+
+.contact-form button {
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 18px;
+    box-shadow: 0 0 40px var(--infoshadow);
+    transition: .5s;
+    margin: 50px 0;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--dominent), var(--gradmix));
+}
+
+.contact-form button:hover {
+    transition: .5s;
+    background: linear-gradient(to left, var(--dominent), var(--gradmix));
+}
+
+.information h2 {
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--cardbdr);
+}
+
+.information img {
+    width: 100%;
+    height: auto;
+}
+
+.column1 {
+    width: 66%;
+    padding: 0 15px;
+}
+
+.column2 {
+    width: 33%;
+    padding: 0 15px;
+}
+
+.contact-details div {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cardbdr);
+}
+
+.contact-details div:last-of-type {
+    border-bottom: none;
+}
+
+.contact-details span {
+    color: var(--dominent);
+    font-weight: 500;
+    font-size: 17px !important;
+    margin-right: 10px;
+}
+
+.contact-details a {
+    text-decoration: none;
+    color: var(--blurblack);
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    color: var(--dominent);
+}
+
+.fa-user:before {
+    content: "\f007"
+}
+
+.fa-envelope:before {
+    content: "\f0e0"
+}
+
+.fa-file-lines:before {
+    content: "\f15c"
+}
+
+.fa-pencil:before {
+    content: "\f303"
+}
+
+.fa-phone:before {
+    content: "\f095"
+}
+
+/* .mapouter {
+    position: relative;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.gmap_canvas iframe {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3/1;
+    height: auto;
+    z-index: 2
+} */
+
+@media screen and (max-width: 1350px) {
+    .column1{
+        width: 60%;
+    }   
+    .column2{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .section-wrapper{
+        flex-direction: column;
+    }
+    .column1{
+        width: 100%;
+    }   
+    .column2{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 900px){
+    .name-email{
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .contact-form,
+.information {
+        padding: 20px;    
+    }
+}
