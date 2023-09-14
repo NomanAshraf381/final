@@ -199,7 +199,7 @@ textarea {
     content: "\f095"
 }
 
-/* .mapouter {
+.mapouter {
     position: relative;
     width: 100%;
 }
@@ -216,7 +216,7 @@ textarea {
     aspect-ratio: 3/1;
     height: auto;
     z-index: 2
-} */
+} 
 
 @media screen and (max-width: 1350px) {
     .column1{
