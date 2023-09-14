@@ -1,16 +1,3 @@
-const mapIframe = document.querySelector('iframe[title="Our location"]');
-
-// Check if the iframe element exists
-if (mapIframe) {
-  // Add passive event listeners for touch and wheel events to the iframe
-  mapIframe.addEventListener('touchstart', touchStartHandler, { passive: false });
-  mapIframe.addEventListener('touchmove', touchMoveHandler, { passive: false });
-  mapIframe.addEventListener('wheel', wheelHandler, { passive: false });
-
-}
-
-
-
 // send email 
 let messageButton = document.querySelector('#sendmess');
 messageButton.addEventListener('click', function (event) {
