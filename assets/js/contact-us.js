@@ -1,3 +1,14 @@
+// Get a reference to the iframe element by its title attribute
+const mapIframe = document.querySelector('iframe[title="Our location"]');
+
+if (mapIframe) {
+  mapIframe.addEventListener('touchstart', touchStartHandler, { passive: true });
+  mapIframe.addEventListener('touchmove', touchMoveHandler, { passive: true });
+  mapIframe.addEventListener('wheel', wheelHandler, { passive: true });
+}
+
+
+
 // send email 
 let messageButton = document.querySelector('#sendmess');
 messageButton.addEventListener('click', function (event) {
