@@ -37,3 +37,5 @@ function changepic(){
         pic.src = oldSrc;
     }
 }
+
+window.addEventListener('scroll', scrollHandler, { passive: true });
